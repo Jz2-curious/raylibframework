@@ -1,8 +1,10 @@
 #pragma once
 
+#include <string>
 #include <RaylibFramework/RaylibFramework.h>
 #include <RaylibFramework/RaylibJson.h>
 
+using std::string;
 
 /**
  * @brief Loads and provides typed access to a named JSON configuration file.
@@ -18,7 +20,7 @@ public:
 	 * @brief Constructs a Config and loads the associated JSON file.
 	 * @param name The name of the configuration file to load, without extension.
 	 */
-
+	explicit Config(string name);
 
 public:
 	/**
@@ -28,14 +30,15 @@ public:
 	 * @param  id  The key identifying the value within the JSON file.
 	 * @return     The value associated with @p id, interpreted as type T.
 	 */
-
+	template<typename T>
+	T Get(const string& id);
 
 private:
 	/** @brief The name of the configuration file, without extension. */
-
+	string m_name;
 
 	/** @brief The parsed JSON data loaded from the configuration file. */
-
+	Json m_json;
 
 private:
 	/**
@@ -43,7 +46,7 @@ private:
 	 *
 	 * Called once during construction. The filename is derived from m_name.
 	 */
-
+	void Load();
 
 };
 

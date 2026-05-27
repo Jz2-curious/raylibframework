@@ -218,7 +218,6 @@
     <None Include="..\Dependencies\include\RaylibFramework\Config.inl" />
     <None Include="..\Dependencies\include\RaylibFramework\Resources\Resource.inl" />
     <None Include="..\Dependencies\include\RaylibFramework\Resources\ResourceManager.inl" />
-    <None Include="Application.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

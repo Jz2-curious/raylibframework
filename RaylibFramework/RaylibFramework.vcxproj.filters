@@ -169,8 +169,5 @@
     <None Include="..\Dependencies\include\RaylibFramework\Actors\Actor.inl">
       <Filter>Framework\Header Files\Actors</Filter>
     </None>
-    <None Include="Application.inl">
-      <Filter>Framework\Header Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
