@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{4c4851ee-51f6-4f58-a0d3-7f8ae97aeaa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Header Files">
+      <UniqueIdentifier>{c2222a6a-8ac0-4a98-a485-25032bd0c67c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source Files">
+      <UniqueIdentifier>{6a7c3b3b-203c-4f5e-be54-a2b62a81993a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Header Files\Actors">
+      <UniqueIdentifier>{6b5aeb98-5009-4f3e-bae3-ea6c47b94ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source Files\Actors">
+      <UniqueIdentifier>{c4844790-2e6a-41c0-b50b-56a4bfdb90d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Header Files\Actors\Components">
+      <UniqueIdentifier>{dcba0e57-5ca8-429a-a365-f9cdc98ecad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source Files\Actors\Components">
+      <UniqueIdentifier>{df997cc5-0481-4668-860d-a3e46364584d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Header Files\Resources">
+      <UniqueIdentifier>{3e732788-8dcb-4d9b-8115-a93af41e1360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source Files\Resources">
+      <UniqueIdentifier>{1855f844-2d39-4961-ac18-ea0e32ae5d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Header Files\Resources\Implementations">
+      <UniqueIdentifier>{e429df91-80ed-41c8-a48d-bc9a949e4c2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source Files\Resources\Implementations">
+      <UniqueIdentifier>{b6b7b23d-d1c6-4c57-9e1f-01e546abfe8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Header Files\Maths">
+      <UniqueIdentifier>{46b44f6a-e884-4b6e-bbcc-fc0cf07ac1ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source Files\Maths">
+      <UniqueIdentifier>{4c19f7ed-0da7-4796-9a46-4dfb2e2e2b32}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Maths\Mat3.cpp">
+      <Filter>Framework\Source Files\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\MathFunctions.cpp">
+      <Filter>Framework\Source Files\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\Vec2.cpp">
+      <Filter>Framework\Source Files\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\Vec3.cpp">
+      <Filter>Framework\Source Files\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInstance.cpp">
+      <Filter>Framework\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Framework\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Framework\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Framework\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors\Actor.cpp">
+      <Filter>Framework\Source Files\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors\ActorComponent.cpp">
+      <Filter>Framework\Source Files\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors\ActorTransform.cpp">
+      <Filter>Framework\Source Files\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors\Components\TextureComponent.cpp">
+      <Filter>Framework\Source Files\Actors\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources\FontResource.cpp">
+      <Filter>Framework\Source Files\Resources\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources\SoundResource.cpp">
+      <Filter>Framework\Source Files\Resources\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources\TextureResource.cpp">
+      <Filter>Framework\Source Files\Resources\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources\Resource.cpp">
+      <Filter>Framework\Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources\ResourceManager.cpp">
+      <Filter>Framework\Source Files\Resources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\GameInstance.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Config.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Window.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Application.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\RaylibJson.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\ExitCode.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Resources\Resource.h">
+      <Filter>Framework\Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Resources\ResourceManager.h">
+      <Filter>Framework\Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Resources\FontResource.h">
+      <Filter>Framework\Header Files\Resources\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Resources\SoundResource.h">
+      <Filter>Framework\Header Files\Resources\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Resources\TextureResource.h">
+      <Filter>Framework\Header Files\Resources\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Maths\Vec3.h">
+      <Filter>Framework\Header Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Maths\Vec2.h">
+      <Filter>Framework\Header Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Maths\Mat3.h">
+      <Filter>Framework\Header Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Maths\MathFunctions.h">
+      <Filter>Framework\Header Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Actors\Components\TextureComponent.h">
+      <Filter>Framework\Header Files\Actors\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Actors\Actor.h">
+      <Filter>Framework\Header Files\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Actors\ActorComponent.h">
+      <Filter>Framework\Header Files\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\Actors\ActorTransform.h">
+      <Filter>Framework\Header Files\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\RaylibFramework\RaylibFramework.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Dependencies\include\RaylibFramework\Config.inl">
+      <Filter>Framework\Header Files</Filter>
+    </None>
+    <None Include="..\Dependencies\include\RaylibFramework\Resources\Resource.inl">
+      <Filter>Framework\Header Files\Resources</Filter>
+    </None>
+    <None Include="..\Dependencies\include\RaylibFramework\Resources\ResourceManager.inl">
+      <Filter>Framework\Header Files\Resources</Filter>
+    </None>
+    <None Include="..\Dependencies\include\RaylibFramework\Actors\Actor.inl">
+      <Filter>Framework\Header Files\Actors</Filter>
+    </None>
+    <None Include="Application.inl">
+      <Filter>Framework\Header Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
