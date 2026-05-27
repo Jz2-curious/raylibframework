@@ -15,7 +15,7 @@ Config::Config(string name)
 void Config::Load()
 {
 	// Constructing the config file path
-	path cfgPath = "\\Config\\";
+	path cfgPath = ".\\Config\\";
 	cfgPath.append(m_name + ".json");
 
 	// Validate that the config file exists

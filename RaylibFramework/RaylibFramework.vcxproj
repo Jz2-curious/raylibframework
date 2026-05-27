@@ -138,6 +138,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\include\;$(ProjectDir);</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,7 +147,8 @@
       <AdditionalDependencies>raylibdll.lib;opengl32.lib;winmm.lib;kernel32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>move /y "$(OutDir)$(TargetName).dll" "$(SolutionDir)Dependencies\native\$(TargetName).dll"</Command>
+      <Command>move /y "$(OutDir)$(TargetName).dll" "$(SolutionDir)Dependencies\native\$(TargetName).dll"
+move /y "$(OutDir)$(TargetName).pdb" "$(SolutionDir)Dependencies\native\$(TargetName).pdb"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

@@ -128,5 +128,3 @@ private:
 
 
 };
-
-#include "Application.inl"
