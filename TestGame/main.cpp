@@ -1,20 +1,7 @@
-#include <RaylibFramework/Config.h>
-#include <RaylibFramework/Window.h>
+#include <RaylibFramework/Application.h>
+#include "TestGameInstance.h"
 
 int main()
 {
-	shared_ptr<Config> cfg = std::make_shared<Config>("Engine");
-	Window* window = new Window{ cfg };
-
-	if (!window->Open())
-	{
-		return EXIT_FAILURE;
-	}
-
-	while (window->IsOpen())
-	{
-		window->BeginFrame();
-
-		window->EndFrame();
-	}
+	return static_cast<int>(Application::Open<TestGameInstance>());
 }

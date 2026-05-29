@@ -28,5 +28,33 @@ shared_ptr<Window> Application::GetWindow() const
 
 EExitCode Application::Run() const
 {
-	return {};
+	// Attempt to open window, returning fail code if it does not succeed
+	if (!m_window->Open())
+	{
+		return EExitCode::WindowFailedToOpen;
+	}
+
+	// Initialise the game instance
+	m_game->Init();
+
+	while (m_window->IsOpen())
+	{
+		// Tick the game with the current frame time
+		const float dt = GetFrameTime();
+		m_game->Tick(dt);
+
+		m_window->BeginFrame();
+
+		// Render the game
+		m_game->Render();
+
+		m_window->EndFrame();
+	}
+
+	// Shutdown the game instance and close the window
+	m_game->Shutdown();
+	m_window->Close();
+
+	// Return success as the whole gameplay loop ran successfully.
+	return EExitCode::Success;
 }
