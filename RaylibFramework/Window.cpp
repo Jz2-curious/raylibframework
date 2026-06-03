@@ -2,7 +2,7 @@
 
 #include "RaylibFramework/Config.h"
 
-Window::Window(const shared_ptr<Config>& config)
+Window::Window(PrivateKey ,const shared_ptr<Config>& config)
 	: m_isOpen{ false }
 {
 	m_width = config->Get<int>("Window.Width");

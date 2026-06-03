@@ -5,6 +5,11 @@
 
 shared_ptr<Application> Application::m_instance;
 
+void Application::deleter::operator()(Application* app) const
+{
+	delete app;
+}
+
 shared_ptr<Application> Application::Instance()
 {
 	return m_instance;
@@ -16,10 +21,10 @@ void Application::Quit()
 	m_instance->m_window->m_isOpen = false;
 }
 
-Application::Application()
+Application::Application(PrivateKey)
 	: m_config{ std::make_shared<Config>("Engine") }, m_game{ nullptr }
 {
-	m_window = std::make_shared<Window>(m_config);
+	m_window = std::make_shared<Window>(Window::PrivateKey{}, m_config);
 }
 
 shared_ptr<Window> Application::GetWindow() const

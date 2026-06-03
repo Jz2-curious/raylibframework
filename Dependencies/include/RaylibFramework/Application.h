@@ -47,7 +47,10 @@ class DLL Application
 	 * constructor. Since PrivateKey itself is private, only friends and members of
 	 * this class can instantiate it, achieving the same effect.
 	 */
-
+	struct PrivateKey
+	{
+		explicit PrivateKey() = default;
+	};
 
 	/**
 	 * @brief Custom deleter for Application's shared_ptr, allowing the destructor to remain private.
@@ -56,7 +59,10 @@ class DLL Application
 	 * operator() in place of the default delete expression when the reference
 	 * count reaches zero.
 	 */
-
+	struct DLL deleter
+	{
+		void operator()(Application* app) const; // deleter d; d();
+	};
 
 public:
 	/**
@@ -102,7 +108,7 @@ public:
 	 * constructor.
 	 *
 	 */
-	Application();
+	Application(PrivateKey);
 
 	/** @brief Copy construction is disabled; only one Application may exist. */
 	Application(const Application&) = delete;
@@ -163,7 +169,8 @@ EExitCode Application::Open()
 #endif
 
 	// Create an instance of the game and application
-	m_instance = shared_ptr<Application>(new Application);
+	// deleter{} is a custom type that overloads the memory cleanup for the smart pointer
+	m_instance = shared_ptr<Application>(new Application{ PrivateKey{} }, deleter{});
 	m_instance->m_game = std::make_shared<GAME>();
 
 	// Run the application, gathering the exit code

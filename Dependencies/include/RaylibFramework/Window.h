@@ -29,7 +29,10 @@ class DLL Window
 	 * constructor. Since PrivateKey itself is private, only friends and members of
 	 * this class can instantiate it, achieving the same effect.
 	 */
-
+	struct PrivateKey
+	{
+		explicit PrivateKey() = default;
+	};
 
 public:
 	/**
@@ -40,7 +43,7 @@ public:
 	 *
 	 * @param config The configuration used for this application.
 	 */
-	Window(const shared_ptr<Config>& config);
+	Window(PrivateKey, const shared_ptr<Config>& config);
 
 public:
 	/**
