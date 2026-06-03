@@ -17,7 +17,7 @@ public:
 	 * @brief Constructs a TextureResource and loads the texture from the given path.
 	 * @param path The file path of the image asset to load.
 	 */
-
+	TextureResource(const string& path);
 
 protected:
 	/**
@@ -26,6 +26,6 @@ protected:
 	 * Reads the file at Path() and populates m_resource with the resulting
 	 * Texture2D. Called once during construction.
 	 */
-
+	void Load() override;
 
 };

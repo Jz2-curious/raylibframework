@@ -1,6 +1,7 @@
 #include "RaylibFramework/Application.h"
-#include "RaylibFramework/Config.h"
 
+#include "RaylibFramework/Config.h"
+#include "RaylibFramework/Resources/ResourceManager.h"
 
 shared_ptr<Application> Application::m_instance;
 
@@ -33,6 +34,8 @@ EExitCode Application::Run() const
 	{
 		return EExitCode::WindowFailedToOpen;
 	}
+
+	ResourceManager::Load(m_config);
 
 	// Initialise the game instance
 	m_game->Init();

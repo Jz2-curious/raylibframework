@@ -1,7 +1,16 @@
 #pragma once
 
+#include <memory>
+#include <string>
+#include <unordered_map>
 #include <RaylibFramework/RaylibFramework.h>
 
+using std::shared_ptr;
+using std::string;
+using std::unordered_map;
+
+class Config;
+class ResourceBase;
 
 /**
  * @brief Manages loading and retrieval of shared resources by identifier.
@@ -13,6 +22,8 @@
  */
 class DLL ResourceManager
 {
+	friend class Application;
+
 public:
 	/**
 	 * @brief Retrieves a resource by identifier, cast to the requested type.
@@ -22,22 +33,22 @@ public:
 	 * @return          A shared_ptr to the resource, or nullptr if not found or the
 	 *                  cast fails.
 	 */
-
+	template<typename RESOURCE>
+	static shared_ptr<RESOURCE> Find(string id);
 
 private:
 	/** @brief All loaded resources, keyed by their string identifier. */
-
+	static unordered_map<string, shared_ptr<ResourceBase>> m_resources;
 
 private:
 	/**
-	 * @brief Loads all resources described by the given configuration file.
+	 * @brief Loads all resources in the folder described by the given configuration file.
 	 *
-	 * Called once by Application during startup. Populates m_resources from
-	 * the entries defined in @p config.
+	 * Called once by Application during startup. 
 	 *
-	 * @param config The configuration describing which resources to load.
+	 * @param config The configuration describing the location of the resources.
 	 */
-
+	static void Load(const shared_ptr<Config>& config);
 
 };
 
